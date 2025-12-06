@@ -1,9 +1,4 @@
 {
-  "buildCommand": "cd kstayble-fe && npm install && npm run build",
-  "outputDirectory": "kstayble-fe/.next",
-  "devCommand": "cd kstayble-fe && npm run dev",
-  "installCommand": "cd kstayble-fe && npm install",
-  "framework": "nextjs",
-  "rootDirectory": "kstayble-fe"
+  "framework": "nextjs"
 }
 
