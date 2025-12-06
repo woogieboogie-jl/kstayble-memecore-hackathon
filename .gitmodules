@@ -1,0 +1,3 @@
+[submodule "kstable-contracts"]
+	path = kstable-contracts
+	url = https://github.com/woogieboogie-jl/kstable-kaia-ideathon-contracts

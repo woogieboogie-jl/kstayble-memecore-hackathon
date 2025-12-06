@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f5f2ff;
+  --foreground: #1a122d;
+  --card: #ffffff;
+  --card-foreground: #1a122d;
+  --popover: #ffffff;
+  --popover-foreground: #1a122d;
+  --primary: #a855f7;
+  --primary-foreground: #0c071b;
+  --secondary: #7c3aed;
+  --secondary-foreground: #f7f4ff;
+  --muted: #eae4ff;
+  --muted-foreground: #4b3a78;
+  --accent: #fbbf24;
+  --accent-foreground: #120c24;
+  --destructive: #ef4444;
+  --destructive-foreground: #fef2f2;
+  --border: #e2d9ff;
+  --input: #ffffff;
+  --ring: #c084fc;
+  --chart-1: #a855f7;
+  --chart-2: #7c3aed;
+  --chart-3: #22d3ee;
+  --chart-4: #fbbf24;
+  --chart-5: #9333ea;
+  --radius: 0.5rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a122d;
+  --sidebar-primary: #a855f7;
+  --sidebar-primary-foreground: #0c071b;
+  --sidebar-accent: #fbbf24;
+  --sidebar-accent-foreground: #0f0a24;
+  --sidebar-border: #e2d9ff;
+  --sidebar-ring: #c084fc;
+  --font-geist: "Geist Sans", sans-serif;
+  --font-manrope: "Manrope", serif;
+  --font-press: "Press Start 2P", "Courier New", monospace;
+}
+
+.dark {
+  --background: #f0eaff;
+  --foreground: #1a122d;
+  --card: #ffffff;
+  --card-foreground: #1a122d;
+  --popover: #ffffff;
+  --popover-foreground: #1a122d;
+  --primary: #c084fc;
+  --primary-foreground: #0b081a;
+  --secondary: #8b5cf6;
+  --secondary-foreground: #0b081a;
+  --muted: #eae4ff;
+  --muted-foreground: #4b3a78;
+  --accent: #fbbf24;
+  --accent-foreground: #110c22;
+  --destructive: #f87171;
+  --destructive-foreground: #110c22;
+  --border: #e2d9ff;
+  --input: #ffffff;
+  --ring: #d8b4fe;
+  --chart-1: #c084fc;
+  --chart-2: #8b5cf6;
+  --chart-3: #22d3ee;
+  --chart-4: #fbbf24;
+  --chart-5: #a855f7;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a122d;
+  --sidebar-primary: #c084fc;
+  --sidebar-primary-foreground: #0b081a;
+  --sidebar-accent: #fbbf24;
+  --sidebar-accent-foreground: #110c22;
+  --sidebar-border: #e2d9ff;
+  --sidebar-ring: #d8b4fe;
+}
+
+@theme inline {
+  --font-sans: var(--font-press);
+  --font-serif: var(--font-press);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground text-[11px] leading-[1.2];
+    background-image: radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.08), transparent 32%),
+      radial-gradient(circle at 80% 10%, rgba(251, 191, 36, 0.05), transparent 28%),
+      radial-gradient(circle at 70% 70%, rgba(34, 211, 238, 0.05), transparent 30%);
+  }
+  .font-press {
+    font-family: var(--font-press);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
